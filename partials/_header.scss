@@ -2,13 +2,15 @@
     box-sizing: border-box;
 }
 
-
 .connecting-header{
     background-color: $header-color;
     padding: 12px 0 10px;
     font-size: $paragraph-shrift;
     
     .info{
+        
+      
+        
         i{
             font-size: 19px;
         }
@@ -29,8 +31,14 @@
         color:white !important;
     }
     a{
-        color: white;
+        color:white;
         text-decoration: none;
+        @include transition(color 0.5s); 
+            
+        &:hover{
+            color: $primary-color;
+            text-decoration: none;
+        }
 
     }
     .login{
@@ -49,35 +57,83 @@
         }
     }
   
-}nav{
+}
+nav{
+   a{
+       color: #333333;
+       font-weight: bold;
+       font-family: sans-serif;
+   }
+  
     
-    position: relative;
-    z-index: 999;
-    padding: 12px  0 10px;
-.dropdown{
-padding-left: 218px;
-padding-top: 3px;
+    .form-control{
+        
+        display: none;
+        margin-right: 30px;
+        position: absolute;
+        z-index: 3;
+        right: 0px;
+      top: 65px;
+        width: 260px;
+        padding: 34px 20px;
+        box-shadow: 0.1px -0.8px 3.3px 1.2px;
+       font-family: "Roboto', sans-serif";
+       .search{
+        background-color: transparent;
+        border: 0;
+        position: absolute;
+        z-index: 1;
+        top: 18px;
+        right: 20px;
+        font-size: 23px;
+        color: #777
+       }
+    
+         #search_input{
+position: absolute;
+top: 0; 
+padding: 10px 20px;
+margin-top: 8px;
+border-radius: 2px;
 
-     ul{
-         padding: 0px;
-         .item{
-             display: inline-block;
-             
-         }
-         li{
-            list-style-type: none; 
-            display: inline-block;
-            margin-right: 14px;
-            font-weight: bold;
-            font-size: 16px;
-            color: #333;
-            font-family: sans-serif;
-            cursor: pointer;
-            i{
-                font-size: 19px;
+}
+        } 
+    }
+    form{
+        padding: 10px 20px;
+
+        
+     
+     
+           
+        }
+       
+        .search-icon{
+            border:0px;
+            background-color: #fff;
+            
+           
+        }
+        ul{
+            li{
+                a{
+                    @include transition(color 0.5s) 
+
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
             }
-         }
-     } 
+        }
+        
+    
+    
+    
+    
+      
 
-}
-}
+
+
+
+
+
